@@ -1,6 +1,6 @@
 """
 File: Asset.py
-Description: <.>
+Description: <The Asset class represents a digital item within the grid that can be stored, transferred, encrypted, or used by hackers and rigs during gameplay.>
 Author: <Elham Debian>
 ID: <debey003>
 Username: <Elliedebian>
