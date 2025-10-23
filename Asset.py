@@ -22,4 +22,11 @@ class Asset:
   def is_encrypted(self):
     return self.__encrypted
 
+  def set_encrypted(self, value):
+    self.__encrypted = value
+
+  name = property(get_name)
+  description = property(get_description)
+  encrypted = property(is_encrypted, set_encrypted)
+
   
