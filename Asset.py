@@ -11,7 +11,7 @@ class Asset:
   def __init__(self, name, description, encrypted):
       self.__name = name
       self.__description = description
-      self.__encrypted = encrypted
+      self.__encrypted = False
 
   def get_name(self):
     return self.__name
