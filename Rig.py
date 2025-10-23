@@ -10,4 +10,11 @@ This is my own work as defined by the University's Academic Misconduct Policy.
 from asset import Asset
 
 class Rig:
+  def __init__(self, name):
+    self.__name = name
+    self.__damage = 0
+    self.__broken = False
+    self.__upgrade_level = 0
+    self.__storage = []
+
   
