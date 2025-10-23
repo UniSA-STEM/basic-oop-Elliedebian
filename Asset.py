@@ -13,4 +13,13 @@ class Asset:
       self.__description = description
       self.__encrypted = encrypted
 
+  def get_name(self):
+    return self.__name
+
+  def get_description(self):
+    return self.__description
+
+  def is_encrypted(self):
+    return self.__encrypted
+
   
