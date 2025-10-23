@@ -29,4 +29,10 @@ class Asset:
   description = property(get_description)
   encrypted = property(is_encrypted, set_encrypted)
 
-  
+  def __str__(self):
+    if self.__encrypted:
+      return f"{self.__name}: {self.__description} [Encrypted]"
+    return f"{self.__name}: {self.__description}"
+
+  def __eq__(self, other):
+    return False
