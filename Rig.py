@@ -17,4 +17,10 @@ class Rig:
     self.__upgrade_level = 0
     self.__storage = []
 
+  def get_name(self):
+    return self.__name
+
+  def get_damage(self):
+    return self.__damage
+
   
