@@ -79,7 +79,7 @@ class Rig:
       return new_asset
 
   def __str__(self):
-      assets = ", ".join[a.name for a in self.__storage]) or "Empty"
+      assets = ", ".join([a.name for a in self.__storage]) or "Empty"
       return f"{self.__name} - {self.condition()} - Stored: {assets}"
 
 

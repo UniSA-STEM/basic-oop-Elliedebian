@@ -85,7 +85,7 @@ class Hacker:
             print("Execution failed, rigs missing.")
             return
         if not target_hacker.rig.broken:
-            print(target_hacker.name, sep="", "'s rig is still secure.")
+            print(f"{target_hacker.name}'s rig is still secure.")
             return
 
         drive = self.scan_storage("Removable Drive")
