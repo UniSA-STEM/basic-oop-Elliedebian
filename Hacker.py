@@ -104,6 +104,19 @@ class Hacker:
         else:
             print(asset_name, "no found in inventory.")
 
+    def retrieve_asset(self, asset_name):
+        if not self.__rig:
+            print(self.__name, "has no rig.")
+            return
+        asset = self.scan_storage(asset_name)
+        if asset:
+            self.__inventory.scan_storage(asset.name)
+            if asset:
+                self.__inventory.append(asset)
+                print(asset.name, "retrieved from", self.__rig.name, end=".")
+        else:
+            print(asset_name, "not found in inventory.")
+
 
 
 
