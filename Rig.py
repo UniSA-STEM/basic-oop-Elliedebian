@@ -7,7 +7,7 @@ Username: <Elliedebian>
 This is my own work as defined by the University's Academic Misconduct Policy.
 """
 
-from asset import Asset
+from Asset import Asset
 
 class Rig:
   def __init__(self, name):
