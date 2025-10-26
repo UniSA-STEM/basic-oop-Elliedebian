@@ -70,7 +70,14 @@ class Hacker:
         else:
             print("Decryption failed - missing chip or asset not encrypted")
 
-
-
+    def upgrade_rig(self):
+        if not self.__rig:
+            print(self.__name, "cannot upgrade - no rig equipped.")
+            return
+        patch = self.scan_inventory("Hardware Patch")
+        if patch:
+            self.__rig.upgrade(True)
+        else:
+            print(self.__name, "lacks a Hardware Patch.")
 
 
