@@ -117,8 +117,15 @@ class Hacker:
         else:
             print(asset_name, "not found in inventory.")
 
+def scan_inventory(self, name):
+    for item in self.__inventory:
+        if item.name == name:
+            self.__inventory.remove(item)
+            return item
+        return None
 
-
-
-
+def __str__(self):
+    inv = ", ".join ([a.name for a in self.__inventory]) or "Empty"
+    rig_status = self.__rig.name if self.__rig else "No Rig"
+    return f"Hacker {self.__name} | Rig: {rig_status} | Trace: {self.__trace_level} | Inventory: {inv}"
 
