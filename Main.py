@@ -33,3 +33,12 @@ def main():
     alice.encrypt_asset("Secret key")
     alice.decrypt_asset("Secret key")
 
+    print("\n--- FINAL STATE ---")
+    print(alice)
+    print(bob)
+    print(alice.rig)
+    print(bob.rig)
+
+
+if __name__ == "__main__":
+    main()
