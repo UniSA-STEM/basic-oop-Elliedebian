@@ -21,3 +21,15 @@ def main():
     alice.rig.generate_asset()
     alice.inventory.append(Asset("Hardware Patch", "Upgrade tool for rigs."))
     alice.upgrade_rig()
+
+    alice.launch_attack(bob)
+    alice.launch_attack(bob)
+    alice.launch_attack(bob)
+
+    alice.extract_assets(bob)
+
+    alice.inventory.append(Asset("Secret key", "A hidden access token."))
+    alice.inventory.append(Asset("Security chip", "Used for encryption."))
+    alice.encrypt_asset("Secret key")
+    alice.decrypt_asset("Secret key")
+
