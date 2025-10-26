@@ -12,6 +12,8 @@ from Rig import Rig
 class Hacker:
     def __init__(self, name):
         self.__name = name
+        self.__description = description
+        self.__encrypted = encrypted
         self.__inventory = [Asset("CryptoToken", "Base currency of the grid.")]
         self.__rig = None
         self.__trace_level = 0
