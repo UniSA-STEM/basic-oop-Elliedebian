@@ -10,7 +10,7 @@ from Asset import Asset
 from Rig import Rig
 
 class Hacker:
-    def __init__(self, name):
+    def __init__(self, name, description, encrypted=False):
         self.__name = name
         self.__description = description
         self.__encrypted = encrypted
