@@ -33,5 +33,33 @@ class Hacker:
     inventory = property(get_inventory)
     rig = property(get_rig)
 
+    def acquire_rig(self, rig_name="Default Rig"):
+        token = self.scan_inventory("CryptoToken")
+        if token:
+            self.__rig = Rig(rig_name)
+            print(self.__name, "acquired and activated", self.__rig.name, end=".")
+        else:
+            print(self.__name, "cannot acquire a rig - CryptoToken required.")
+
+    def launch_attack(self, target_hacker):
+        if not self.__rig:
+            print(self.__name, "has no rig to launch an attack.")
+            return
+        if self.__trace_level > 5:
+            print(self.__name, "is exposed and cannot attack.")
+            return
+
+        spike = self.scan_storage("Data Spike")
+        if spike:
+            print(self.__name, "launches a data spike at", target_hacker.name, end="!")
+            target_rig = target_hacker.rig
+            if target_rig:
+                target_rig.take_hit()
+                self.__trace_level += 1
+            else:
+                print(target_hacker.name, "has no rig - attack wasted.")
+        else:
+            print("No Data Spikes available in", self.__rig.name, "storage.")
+
 
 
