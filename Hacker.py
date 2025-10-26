@@ -9,3 +9,10 @@ This is my own work as defined by the University's Academic Misconduct Policy.
 from Asset import Asset
 from Rig import Rig
 
+class Hacker:
+    def __init__(self, name):
+        self.__name = name
+        self.__inventory = [Asset("CryptoToken", "Base currency of the grid.")]
+        self.__rig = None
+        self.__trace_level = 0
+
