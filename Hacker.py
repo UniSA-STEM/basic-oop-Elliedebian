@@ -80,4 +80,19 @@ class Hacker:
         else:
             print(self.__name, "lacks a Hardware Patch.")
 
+    def extract_assets(self, target_hacker):
+        if not self.__rig or not target_hacker.rig:
+            print("Execution failed, rigs missing.")
+            return
+        if not target_hacker.rig.broken:
+            print(target_hacker.name, sep="", "'s rig is still secure.")
+            return
+
+        drive = self.scan_storage("Removable Drive")
+        if not drive:
+            print("No removable drive found in storage.")
+            return
+
+
+
 
