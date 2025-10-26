@@ -61,5 +61,16 @@ class Hacker:
         else:
             print("No Data Spikes available in", self.__rig.name, "storage.")
 
+    def encrypt_asset(self, asset_name):
+        chip = self.scan_inventory("Security Chip")
+        asset = self.scan_inventory(asset_name)
+        if chip and asset and asset.encrypted:
+            asset.set_encrypted(False)
+            print(self.__name, "decrypted", asset.name, end=".")
+        else:
+            print("Decryption failed - missing chip or asset not encrypted")
+
+
+
 
 
