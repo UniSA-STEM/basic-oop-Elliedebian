@@ -15,3 +15,9 @@ def main():
     alice = Hacker("Wonderland")
     bob = Hacker("BobStar")
 
+    alice.acquire_rig("Phantom-X")
+    bob.acquire_rig("Sphere-9")
+
+    alice.rig.generate_asset()
+    alice.inventory.append(Asset("Hardware Patch", "Upgrade tool for rigs."))
+    alice.upgrade_rig()
