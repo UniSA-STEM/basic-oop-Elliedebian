@@ -1,8 +1,8 @@
 """
 File: Hacker.py
-Description: <A brief description of this Python module.>
-Author: <full name>
-ID: <student_id>
-Username: <username>
+Description: <Controls the main game mechanics, letting players manage rigs, collect and use assets, and perform actions like upgrading, repairing, and attacking within the hacking simulation>
+Author: <Elham Debian>
+ID: <debey003>
+Username: <Elliedebian>
 This is my own work as defined by the University's Academic Misconduct Policy.
 """
