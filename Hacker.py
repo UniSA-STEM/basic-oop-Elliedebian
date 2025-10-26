@@ -16,3 +16,22 @@ class Hacker:
         self.__rig = None
         self.__trace_level = 0
 
+    def get_name(self):
+        return self.__name
+
+    def get_trace_level(self):
+        return self.__trace_level
+
+    def get_inventory(self):
+        return self.__inventory
+
+    def get_rig(self):
+        return self.__rig
+
+    name = property(get_name)
+    trace_level = property(get_trace_level)
+    inventory = property(get_inventory)
+    rig = property(get_rig)
+
+
+
