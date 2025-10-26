@@ -70,6 +70,18 @@ class Rig:
 
   def condition(self):
       state = "Broken" if self.__broken else "Pristine"
+      return f"{state} (level {self.__upgrade_level})"
+
+  def generate_asset(self):
+      new_asset = Asset("Security Chip", "Used for encryption or decryption.")
+      self.__storage.append(new_asset)
+      print(self.__name, "generated a new asset:", new_asset)
+      return new_asset
+
+  def __str__(self):
+      assets = ", ".join[a.name for a in self.__storage]) or "Empty"
+      return f"{self.__name} - {self.condition()} - Stored: {assets}"
+
 
 
   
