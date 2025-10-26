@@ -126,6 +126,15 @@ def scan_inventory(self, name):
             return item
         return None
 
+def scan_storage(self, name):
+    if not self.__rig:
+        return None
+    for item in self.__rig.storage:
+        if item.name == name:
+            self.__rig.storage.remove(item)
+            return item
+    return None
+
 def __str__(self):
     inv = ", ".join ([a.name for a in self.__inventory]) or "Empty"
     rig_status = self.__rig.name if self.__rig else "No Rig"
