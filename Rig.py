@@ -38,6 +38,38 @@ class Rig:
   upgrade_level = property(get_upgrade_level)
   storage = property(get_storage)
 
+  def repair(self, token_found:bool):
+      if token_found:
+          if self.__damage > 0:
+              self.__damage = 0
+              self.__broken = False
+              print(self.__name, "has been repaired and is now functional.")
+          else:
+              print(self.__name, "is pristine - no repair needed.")
+
+      else:
+          print("Repair failed - missing CryptoToken.")
+
+  def upgrade(self, patch_found:bool):
+      if patch_found:
+          self.__upgrade_level += 1
+          print(self.__name, "upgraded to Level", self.__upgrade_level, end=".")
+      else:
+          print("Upgrade failed - missing Hardware Patch.")
+
+  def take_hit(self):
+      if not self.__broken:
+          print(self.__name, "took a hit! Damage level:", self.__damage, end=".")
+          limit = 2 - self.__upgrade_level
+          if self.__damage > max(1, limit):
+              self.__broken = True
+              print(self.__name, "has broken down!")
+
+      else:
+          print(self.__name, "is already broken.")
+
+  def condition(self):
+      state = "Broken" if self.__broken else "Pristine"
 
 
   
