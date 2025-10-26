@@ -23,4 +23,21 @@ class Rig:
   def get_damage(self):
     return self.__damage
 
+  def is_broken(self):
+      return self.__broken
+
+  def get_upgrade_level(self):
+    return self.__upgrade_level
+
+  def get_storage(self):
+    return self.__storage
+
+  name = property(get_name)
+  damage = property(get_damage)
+  broken = property(is_broken)
+  upgrade_level = property(get_upgrade_level)
+  storage = property(get_storage)
+
+
+
   
