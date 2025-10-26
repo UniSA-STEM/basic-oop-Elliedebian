@@ -11,3 +11,7 @@ from Hacker import Hacker
 from Rig import Rig
 from Asset import Asset
 
+def main():
+    alice = Hacker("Wonderland")
+    bob = Hacker("BobStar")
+
