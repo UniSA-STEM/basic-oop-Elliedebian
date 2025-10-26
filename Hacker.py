@@ -13,7 +13,7 @@ class Hacker:
     def __init__(self, name, description=None, encrypted:bool=False):
         self.__name = name
         self.__description = description
-        self.__encrypted = bool(encrypted)
+        self.__encrypted = encrypted
         self.__inventory = [Asset("CryptoToken", "Base currency of the grid.")]
         self.__rig = None
         self.__trace_level = 0
