@@ -93,6 +93,19 @@ class Hacker:
             print("No removable drive found in storage.")
             return
 
+    def store_asset(self, asset_name):
+        if not self.__rig:
+            print(self.__name, "has no rig to store assets in.")
+            return
+        asset = self.scan_inventory(asset_name)
+        if asset:
+            self.__rig.storage.append(asset)
+            print(asset.name, "stored in", self.__rig.name, end=".")
+        else:
+            print(asset_name, "no found in inventory.")
+
+
+
 
 
 
